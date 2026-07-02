@@ -52,9 +52,12 @@ correct or extend it with a new dated entry that references the old. A `status` 
 
 ## Compose the entry
 
-1. **Classify** - decide which kind the entry is from the catalog below, then open that kind's
-   file for what is worth capturing. No catch-all: if nothing fits, do not force an entry (see
-   [Out of scope](#out-of-scope)).
+1. **Classify and scope** - decide which kind the entry is from the catalog below, then open that
+   kind's file for what is worth capturing. No catch-all: if nothing fits, do not force an entry
+   (see [Out of scope](#out-of-scope)). One entry per thing that could be reversed on its own:
+   `supersedes` replaces a whole file, so a file bundling several independent choices cannot have
+   one of them reversed without orphaning the rest. When a session settles several such things,
+   write several entries and, if it helps, one `summary` that ties them together.
 2. **Name the file** - `<path>/<kind>-<slug>.md`. Create the day folder if it does not exist.
    Slug the title: transliterate to ASCII, drop punctuation and emoji, lowercase, kebab-case, cap
    ~60 chars. Never overwrite - if the name is taken, append `-2`, `-3`, and so on.
