@@ -10,12 +10,13 @@ it adapts to how you already work.
 
 ## Why
 
-Working with an AI agent is a constant fight for good context. The journal started as a habit:
-at the end of a session I would ask the agent to summarise the work into a dated file. Those
-summaries turned out to be the best thing I found that month - ready-to-load context I could
-drop back in to bring the agent back on track. No new tool, just Markdown in a `docs/` directory
-that git versions and my team can share. Everything since is that habit grown up: a small set of
-entry kinds that keep my capture lossless and the reload sharp.
+Working with an AI agent is a constant fight for good context. A year ago I added fifteen lines
+to `CLAUDE.md`: summarise each session into a dated file under `docs/journal/`. Those files
+turned out to be ready-to-load context that brought the agent back on track - the best thing I
+found that month. A year of daily use grew it into this skill: decisions with their rejected
+alternatives, dead-ends nobody walks twice, lessons with the cost that earned them. Plain
+Markdown, versioned in git - so the history is readable not just by my agent, but by my
+coworkers and their agents too.
 
 ## What it captures
 
