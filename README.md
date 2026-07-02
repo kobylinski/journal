@@ -44,11 +44,12 @@ Copilot, OpenCode, and others read, symlinked into Claude Code:
 npx skills add kobylinski/journal
 ```
 
-**Claude Code plugin** - managed install with updates:
+**Claude Code plugin** - managed install with updates. The repo doubles as its own
+marketplace named `kobylinski`, so the install id is `journal@kobylinski`:
 
 ```
 /plugin marketplace add kobylinski/journal
-/plugin install journal
+/plugin install journal@kobylinski
 ```
 
 **Manual** - copy the folder into an agent's skills directory:

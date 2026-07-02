@@ -1,0 +1,11 @@
+{
+  "name": "kobylinski",
+  "owner": { "name": "Marek Kobylinski", "email": "marek@kobylinski.co" },
+  "plugins": [
+    {
+      "name": "journal",
+      "source": "./",
+      "description": "Capture development history into an immutable, dated journal - decisions, research verdicts, tombstones, lessons, external sources, session summaries, reminders, and drafts."
+    }
+  ]
+}

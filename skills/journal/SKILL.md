@@ -57,8 +57,9 @@ correct or extend it with a new dated entry that references the old. A `status` 
    - `kind` - the kind chosen in step 1.
    - `title` - short and specific.
    - `status` - `confirmed` (settled, trustworthy) or `provisional` (tentative: a proposal,
-     hypothesis, or unfinished draft). Superseded is *derived* from the reference graph;
-     `archived` is set only by a later **demotion**, a status-only change that never rewrites the body.
+     hypothesis, or unfinished draft). An entry is *superseded* when a later entry points at it
+     with `supersedes` - the old entry is never edited; `archived` is set only by a later
+     **demotion**, a status-only change that never rewrites the body.
    - `author` - the git user (from Know the user).
    - `created` - date and time, with UTC offset.
    - `tags` - keywords for retrieval.
@@ -68,7 +69,8 @@ correct or extend it with a new dated entry that references the old. A `status` 
      exhaustively) and link the ones this entry genuinely touches. Each is a forward reference to
      a prior entry, valued
      with its path relative to the journal root; the journal grows forward - past entries are extended by new
-     references, not rewritten - and reverse links are derived by the index. Keys:
+     references, not rewritten - and reverse links are never written into old entries; they can be
+     reconstructed by scanning forward references. Keys:
      - `sourced-from` - derived from a `source` (or other entry)
      - `consequence-of` - records a consequence of a prior entry
      - `follows-up` - continues / updates a prior entry
