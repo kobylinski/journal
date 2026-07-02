@@ -4,7 +4,7 @@ A Claude Code plugin that captures **development history** - the *why*, *what wa
 *what was decided* that fades from the code and from memory within weeks. Code answers *what*;
 the journal answers the rest.
 
-It is a **dated registry**: low-friction to write, grown by new entries that reference old ones
+It is a **dated record**: low-friction to write, grown by new entries that reference old ones
 rather than by rewriting the past. Eight entry kinds, with a light per-project configuration so
 it adapts to how you already work.
 

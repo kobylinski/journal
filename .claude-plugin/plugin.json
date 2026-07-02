@@ -1,7 +1,7 @@
 {
   "name": "journal",
   "description": "Capture development history into an immutable, dated journal - decisions, research verdicts, tombstones, lessons, external sources, session summaries, reminders, and drafts.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Marek Kobylinski",
     "email": "marek@kobylinski.co"

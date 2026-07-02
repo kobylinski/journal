@@ -9,5 +9,6 @@ Worth capturing - include what applies, and anything else that matters:
 - the thinking so far, as loose as it needs to be
 - options on the table, and any leanings
 
-A draft is a way station: when it resolves it graduates to a `docs/` spec or a `decision`; when
-it dies it becomes a `tombstone`. Either way the successor carries `supersedes` back here.
+A draft is a way station. When it resolves, a short closing entry (usually a `decision`) carries
+`supersedes` back here and names the docs/ spec it became; when it dies, a `tombstone` does the
+same.
