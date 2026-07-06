@@ -5,7 +5,7 @@
     {
       "name": "journal",
       "source": "./",
-      "description": "Capture development history into an immutable, dated journal - decisions, research verdicts, tombstones, lessons, external sources, session summaries, reminders, and drafts."
+      "description": "Capture development history into an immutable, dated journal - decisions, research verdicts, tombstones, lessons, external sources, session summaries, reminders, drafts, and execution plans."
     }
   ]
 }

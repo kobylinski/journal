@@ -2,7 +2,8 @@
 name: journal
 description: >-
   Capture development history into the project's journal - decisions, research verdicts,
-  tombstones, lessons, external sources, session summaries, reminders, and drafts. Use when the
+  tombstones, lessons, external sources, session summaries, reminders, drafts, and execution
+  plans. Use when the
   user asks to journal, save, log, keep, or record one of these (e.g. "save this decision",
   "keep this email", "note this dead-end"). It writes only on the user's go, or under conditions
   the project's agent-instructions file authorises. Also use to recall: when the user asks what
@@ -57,7 +58,8 @@ correct or extend it with a new dated entry that references the old. A `status` 
    (see [Out of scope](#out-of-scope)). One entry per thing that could be reversed on its own:
    `supersedes` replaces a whole file, so a file bundling several independent choices cannot have
    one of them reversed without orphaning the rest. When a session settles several such things,
-   write several entries and, if it helps, one `summary` that ties them together.
+   write several entries - do not merge them to keep the folder tidy; many small entries is the
+   correct shape, and one `summary` may tie them together.
 2. **Name the file** - `<path>/<kind>-<slug>.md`. Create the day folder if it does not exist.
    Slug the title: transliterate to ASCII, drop punctuation and emoji, lowercase, kebab-case, cap
    ~60 chars. Never overwrite - if the name is taken, append `-2`, `-3`, and so on.
@@ -91,7 +93,10 @@ correct or extend it with a new dated entry that references the old. A `status` 
    `research` with no verdict, `lesson` with no cost), reclassify to a kind that fits rather than
    ask; if none fits, do not force an entry. Before writing any entry, redact secrets and PII,
    marking each cut - the journal is committed to the repository and a missed redaction is
-   permanent in git history.
+   permanent in git history. When an entry preserves code that is leaving the tree, cite it as
+   narrowly as the point allows - the smallest fragment, with where it lived (`path@sha`, and a
+   line range) - never a wholesale copy, and never code without the reason it earned a place here.
+   Git keeps the code; the journal keeps the why.
 5. **Confirm** - report the path back to the user.
 
 Example frontmatter:
@@ -149,8 +154,8 @@ Read `kinds/summary.md` for more details.
 
 ### reminder
 
-A known issue you deliberately park. Use it to note what it is and why now is not the time - a
-record, not a task to schedule.
+A known issue you deliberately park, or a piece of code worth preserving as the tree around it is
+removed. Use it to note what it is and why it is kept - a record, not a task to schedule.
 Read `kinds/reminder.md` for more details.
 
 ### draft
@@ -158,6 +163,13 @@ Read `kinds/reminder.md` for more details.
 In-flight thinking too big to leave in the conversation but not yet a committed spec. Use it to
 park a design you are still shaping, before it graduates to a doc or dies as a tombstone.
 Read `kinds/draft.md` for more details.
+
+### plan
+
+An ordered set of phases for a large change, held while the work is in flight - each phase carrying
+how it is known done and what makes it stop. Use it to consolidate
+decisions already made into a runnable order, then let execution emit the history.
+Read `kinds/plan.md` for more details.
 
 ## Recall
 
@@ -193,8 +205,9 @@ or status, cited by path like any entry.
 
 ## Out of scope
 
-These are not journal entries: finished implementation specs or plans, committed
-design/architecture docs, API/event reference, operational runbooks, and cross-session memory.
-When asked to journal one of these, do not journal it and do not silently move it - say it is
-not a journal entry and ask the user where it should go. An *incoming* spec the user works from
-is not a doc; it is a `source`.
+These are not journal entries: committed design/architecture docs, finished implementation specs,
+API/event reference, operational runbooks, and cross-session memory. An in-flight `plan` that
+orders decisions the journal already holds is an entry (see the catalog); a finished, committed
+spec a reader builds from is not - it belongs in `docs/`. When asked to journal one of these, do
+not journal it and do not silently move it - say it is not a journal entry and ask the user where
+it should go. An *incoming* spec the user works from is not a doc; it is a `source`.

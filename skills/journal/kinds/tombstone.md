@@ -9,5 +9,9 @@ Worth capturing - include what applies, and anything else that matters:
 - why it was killed or skipped
 - what is done instead, if anything
 
+Keep one abandoned thing per tombstone, for the same reason a `decision` keeps one choice:
+`supersedes` reverses a whole file. A killed approach may quote its worst fragment as a warning -
+narrowly, and only with the reason it is here (see Compose, step 4).
+
 Code cannot show what is absent; this entry is the only trace. If it buries an earlier `draft`
 or `decision`, add `supersedes`; if it closes a `reminder`, add `resolves`.
