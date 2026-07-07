@@ -5,7 +5,7 @@ A Claude Code plugin that captures **development history** - the *why*, *what wa
 the journal answers the rest.
 
 It is a **dated record**: low-friction to write, grown by new entries that reference old ones
-rather than by rewriting the past. Eight entry kinds, with a light per-project configuration so
+rather than by rewriting the past. Nine entry kinds, with a light per-project configuration so
 it adapts to how you already work.
 
 ## Why
@@ -28,8 +28,9 @@ coworkers and their agents too.
 | `lesson` | a standing rule and the cost that motivated it |
 | `source` | a verbatim external artifact, *received not authored* |
 | `summary` | a session recap: commits consolidated, open threads named |
-| `reminder` | a known issue deliberately parked: what it is and why now is not the time |
+| `reminder` | a known issue parked, or a piece of code worth preserving as the tree is torn out |
 | `draft` | in-flight thinking, too big for context, not yet a spec |
+| `plan` | a large change ordered into phases the executor can run on its own |
 
 By default the journal writes only when you ask; a project can widen that to record chosen
 moments automatically.
